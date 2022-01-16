@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Consentify",
+    "version": "0.1",
+    "description": "Declines consents",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.google.com/*"
+            ],
+            "js": [
+                "wait.js",
+                "google/google.js"
+            ]
+        },
+        {
+            "matches": [
+                "*://consent.google.com/*"
+            ],
+            "js": [
+                "wait.js",
+                "google/google-consent.js"
+            ]
+        }
+    ]
+}
